@@ -120,6 +120,9 @@ class INFOGAN():
         q_net = Dense(128, activation='relu')(img_embedding)
         label = Dense(self.num_classes, activation='softmax')(q_net)
 
+
+
+
         # Return discriminator and recognition network
         return Model(img, validity), Model(img, label)
 
